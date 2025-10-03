@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Snake Game",
+      "type": "shell",
+      "command": "C:/w64devkit/g++.exe",
+      "args": [
+        "-g",
+        "${workspaceFolder}/src/*.cpp",
+        "-o", "${workspaceFolder}/build/snake_game.exe",
+        "-I", "C:/SFML-3.0.2/include",  // Ruta a los headers de SFML
+        "-L", "C:/SFML-3.0.2/lib",      // Ruta a las librerías de SFML
+        "-lsfml-graphics",
+        "-lsfml-window",
+        "-lsfml-system",
+        "-static"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
